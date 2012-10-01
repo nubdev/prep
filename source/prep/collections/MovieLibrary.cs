@@ -21,7 +21,6 @@ namespace prep.collections
     public void add(Movie movie)
     {
       if (already_contains(movie)) return;
-
       movies.Add(movie);
     }
 
@@ -50,6 +49,11 @@ namespace prep.collections
 
       return results;
     }
+
+    public IEnumerable<Movie>  all_.....()
+  {
+    throw new NotImplementedException();
+  }
 
     public IEnumerable<Movie> all_movies_published_by_pixar_or_disney()
     {
