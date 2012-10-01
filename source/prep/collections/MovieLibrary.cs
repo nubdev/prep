@@ -36,25 +36,13 @@ namespace prep.collections
 
     public IEnumerable<Movie> all_movies_published_by_pixar()
     {
-      var studio = new List<ProductionStudio> {ProductionStudio.Pixar};
-      return this.all_movies_matching(studio);
+      throw new NotImplementedException();
     }
 
-    public IEnumerable<Movie> all_movies_matching(MovieCondition condition)
-    {
-      return movies.all_items_matching(condition);
-    }
 
     public delegate bool MovieCondition(Movie movie);
 
     public IEnumerable<Movie> all_movies_published_by_pixar_or_disney()
-    {
-      return
-        all_movies_matching(
-          x => x.production_studio == ProductionStudio.Pixar || x.production_studio == ProductionStudio.Disney);
-    }
-
-    bool is_published_by_pixar(Movie movie)
     {
       throw new NotImplementedException();
     }
@@ -86,7 +74,7 @@ namespace prep.collections
 
     public IEnumerable<Movie> all_movies_published_after(int year)
     {
-      return all_movies_matching(x => x.date_published.Year > year);
+      throw new NotImplementedException();
     }
 
     public IEnumerable<Movie> all_movies_published_between_years(int startingYear, int endingYear)
