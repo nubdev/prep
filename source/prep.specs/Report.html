@@ -1,0 +1,655 @@
+<html>
+<head>
+  <title>Machine.Specifications Report</title>
+  <style type="text/css">body {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .9em;
+}
+
+.count {
+  color: lightgrey;
+}
+
+.failure, .notimplemented, .ignored {
+  color: red;
+  font-weight: bold;
+  display: inline;
+}
+
+.notimplemented {
+  color: orange;
+}
+
+.ignored {
+  color: gold;
+}
+
+p.exception_type {
+  color: black;
+  font-weight: bold;
+  display: inline;
+}
+
+pre.exception_message {
+  border-style: dashed;
+  border-color: #FF828D;
+  border-width: thin;
+  background-color: #FFD2CF;
+  white-space: pre-wrap; /* CSS2.1 compliant */
+  white-space: -moz-pre-wrap; /* Mozilla-based browsers */
+  white-space: o-pre-wrap; /* Opera 7+ */
+  padding: 1em;
+}
+
+hr {
+  color: lightgrey;
+  border: 1px solid lightgrey;
+  height: 1px;
+}
+
+ul.prev-next {
+  padding: 0;
+  margin: 0;
+  font-size: 2em;
+  }
+  
+.spec ul.prev-next {
+  float: right;
+  right: 30%;
+  position: absolute;
+  margin-top: -1em;
+  }
+
+ul.prev-next li {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+
+ul.prev-next li a {
+  color: lightgrey;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 .3em;
+  border: 1px solid lightgrey;
+}
+
+ul.prev-next li.failure a {
+  border-color: red;
+}
+
+ul.prev-next li.notimplemented a {
+  border-color: orange;
+}
+
+ul.prev-next li.ignored a {
+  border-color: gold;
+}
+
+ul.prev-next li.failure a:hover {
+  background-color: red;
+  color: #fff;
+}
+
+ul.prev-next li.notimplemented a:hover {
+  background-color: orange;
+  color: #000;
+}
+
+ul.prev-next li.ignored a:hover {
+  background-color: gold;
+  color: #000;
+}
+
+ul.prev-next li.back a:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+div.supplement {
+  display: none;
+}
+  
+@media print {
+  ul.prev-next {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+  <ul class="prev-next">
+    <li class="failure">
+      <a href="#4">Go to first failed specification &dArr;</a>
+    </li>
+  </ul>
+  <h1>
+    prep.specs
+</h1>
+<h2 class="count">
+  1 concern,
+  8 contexts,
+  18 specifications
+  ,
+    <span class="failure">16 failures</span>
+</h2>
+  
+  <hr/>
+  <hr/>
+  
+  <h2 class="concern">
+  MovieLibrary specifications
+</h2>
+<h3 class="count">
+  8 contexts, 18 specifications
+</h3><h3 class="context">
+  when adding a movie to the library
+</h3>
+<h4 class="count">
+  1 specification
+</h4>
+        <ul>
+          <li class="spec"><span id="4">should store it in the movie collection</span>
+
+  <div class="failure">
+    &lArr; FAILED
+    <ul class="prev-next">
+      <li class="failure">
+      </li>
+      <li class="failure">
+        <a href="#5" title="Go to next failed specification">&dArr;</a>
+      </li>
+    </ul>
+  </div>
+  <p class="exception_type">
+    NotImplementedException
+  </p>
+  <pre class="exception_message">System.NotImplementedException: The method or operation is not implemented.
+   at prep.collections.MovieLibrary.add(Movie movie) in c:\Users\james_bunn\Documents\GitHub\prep\source\prep\collections\MovieLibrary.cs:line 22
+   at prep.specs.MovieLibrarySpecs.when_adding_a_movie_to_the_library.&lt;.ctor&gt;b__17() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep.specs\MovieLibrarySpecs.cs:line 138
+   at Machine.Specifications.Utility.RandomExtensionMethods.Each[T](IEnumerable`1 enumerable, Action`1 action)
+   at Machine.Specifications.Model.Context.EstablishContext()</pre>
+
+
+
+
+<script type="text/javascript">
+  function toggleVisibility(id, description)
+  {
+    var section = document.getElementById(id);
+    var link = document.getElementById(id + "_link");
+
+    if (section.style.display == "block")
+    {
+      section.style.display = "none";
+      link.innerHTML = "Show " + description;
+    } else
+    {
+      section.style.display = "block";
+      link.innerHTML = "Hide " + description;
+    }
+  };
+</script> 
+
+          </li>
+        </ul><h3 class="context">
+  when adding an existing movie in the collection again
+</h3>
+<h4 class="count">
+  1 specification
+</h4>
+        <ul>
+          <li class="spec"><span id="5">should not restore the movie in the collection</span>
+
+  <div class="failure">
+    &lArr; FAILED
+    <ul class="prev-next">
+      <li class="failure">
+        <a href="#4" title="Go to previous failed specification">&uArr;</a>
+      </li>
+      <li class="failure">
+        <a href="#6" title="Go to next failed specification">&dArr;</a>
+      </li>
+    </ul>
+  </div>
+  <p class="exception_type">
+    NotImplementedException
+  </p>
+  <pre class="exception_message">System.NotImplementedException: The method or operation is not implemented.
+   at prep.collections.MovieLibrary.add(Movie movie) in c:\Users\james_bunn\Documents\GitHub\prep\source\prep\collections\MovieLibrary.cs:line 22
+   at prep.specs.MovieLibrarySpecs.when_adding_an_existing_movie_in_the_collection_again.&lt;.ctor&gt;b__1d() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep.specs\MovieLibrarySpecs.cs:line 158
+   at Machine.Specifications.Utility.RandomExtensionMethods.Each[T](IEnumerable`1 enumerable, Action`1 action)
+   at Machine.Specifications.Model.Context.EstablishContext()</pre>
+
+
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when adding two different copies of the same movie
+</h3>
+<h4 class="count">
+  1 specification
+</h4>
+        <ul>
+          <li class="spec"><span id="6">should store only 1 copy in the collection</span>
+
+  <div class="failure">
+    &lArr; FAILED
+    <ul class="prev-next">
+      <li class="failure">
+        <a href="#5" title="Go to previous failed specification">&uArr;</a>
+      </li>
+      <li class="failure">
+        <a href="#7" title="Go to next failed specification">&dArr;</a>
+      </li>
+    </ul>
+  </div>
+  <p class="exception_type">
+    NotImplementedException
+  </p>
+  <pre class="exception_message">System.NotImplementedException: The method or operation is not implemented.
+   at prep.collections.MovieLibrary.add(Movie movie) in c:\Users\james_bunn\Documents\GitHub\prep\source\prep\collections\MovieLibrary.cs:line 22
+   at prep.specs.MovieLibrarySpecs.when_adding_two_different_copies_of_the_same_movie.&lt;.ctor&gt;b__25() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep.specs\MovieLibrarySpecs.cs:line 177
+   at Machine.Specifications.Utility.RandomExtensionMethods.Each[T](IEnumerable`1 enumerable, Action`1 action)
+   at Machine.Specifications.Model.Context.EstablishContext()</pre>
+
+
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when asked for all of the movies
+</h3>
+<h4 class="count">
+  1 specification
+</h4>
+        <ul>
+          <li class="spec"><span id="2">should receive a set containing each movie in the library</span>
+
+
+
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when counting the number of movies
+</h3>
+<h4 class="count">
+  1 specification
+</h4>
+        <ul>
+          <li class="spec"><span id="1">should return the number of all movies in the library</span>
+
+
+
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when searching for movies
+</h3>
+<h4 class="count">
+  7 specifications
+</h4>
+        <ul>
+          <li class="spec"><span id="7">should be able to find all movies published by pixar</span>
+
+  <div class="failure">
+    &lArr; FAILED
+    <ul class="prev-next">
+      <li class="failure">
+        <a href="#6" title="Go to previous failed specification">&uArr;</a>
+      </li>
+      <li class="failure">
+        <a href="#8" title="Go to next failed specification">&dArr;</a>
+      </li>
+    </ul>
+  </div>
+  <p class="exception_type">
+    NotImplementedException
+  </p>
+  <pre class="exception_message">System.NotImplementedException: The method or operation is not implemented.
+   at prep.collections.MovieLibrary.all_movies_published_by_pixar() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep\collections\MovieLibrary.cs:line 32
+   at prep.specs.MovieLibrarySpecs.when_searching_for_movies.&lt;.ctor&gt;b__33() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep.specs\MovieLibrarySpecs.cs:line 192
+   at Machine.Specifications.Model.Specification.Verify()</pre>
+
+
+
+ 
+
+          </li>
+          <li class="spec"><span id="8">should be able to find all movies published by pixar or disney</span>
+
+  <div class="failure">
+    &lArr; FAILED
+    <ul class="prev-next">
+      <li class="failure">
+        <a href="#7" title="Go to previous failed specification">&uArr;</a>
+      </li>
+      <li class="failure">
+        <a href="#9" title="Go to next failed specification">&dArr;</a>
+      </li>
+    </ul>
+  </div>
+  <p class="exception_type">
+    NotImplementedException
+  </p>
+  <pre class="exception_message">System.NotImplementedException: The method or operation is not implemented.
+   at prep.collections.MovieLibrary.all_movies_published_by_pixar_or_disney() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep\collections\MovieLibrary.cs:line 37
+   at prep.specs.MovieLibrarySpecs.when_searching_for_movies.&lt;.ctor&gt;b__34() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep.specs\MovieLibrarySpecs.cs:line 199
+   at Machine.Specifications.Model.Specification.Verify()</pre>
+
+
+
+ 
+
+          </li>
+          <li class="spec"><span id="9">should be able to find all movies not published by pixar</span>
+
+  <div class="failure">
+    &lArr; FAILED
+    <ul class="prev-next">
+      <li class="failure">
+        <a href="#8" title="Go to previous failed specification">&uArr;</a>
+      </li>
+      <li class="failure">
+        <a href="#10" title="Go to next failed specification">&dArr;</a>
+      </li>
+    </ul>
+  </div>
+  <p class="exception_type">
+    NotImplementedException
+  </p>
+  <pre class="exception_message">System.NotImplementedException: The method or operation is not implemented.
+   at prep.collections.MovieLibrary.all_movies_not_published_by_pixar() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep\collections\MovieLibrary.cs:line 52
+   at prep.specs.MovieLibrarySpecs.when_searching_for_movies.&lt;.ctor&gt;b__35() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep.specs\MovieLibrarySpecs.cs:line 206
+   at Machine.Specifications.Model.Specification.Verify()</pre>
+
+
+
+ 
+
+          </li>
+          <li class="spec"><span id="10">should be able to find all movies published after a certain year</span>
+
+  <div class="failure">
+    &lArr; FAILED
+    <ul class="prev-next">
+      <li class="failure">
+        <a href="#9" title="Go to previous failed specification">&uArr;</a>
+      </li>
+      <li class="failure">
+        <a href="#11" title="Go to next failed specification">&dArr;</a>
+      </li>
+    </ul>
+  </div>
+  <p class="exception_type">
+    NotImplementedException
+  </p>
+  <pre class="exception_message">System.NotImplementedException: The method or operation is not implemented.
+   at prep.collections.MovieLibrary.all_movies_published_after(Int32 year) in c:\Users\james_bunn\Documents\GitHub\prep\source\prep\collections\MovieLibrary.cs:line 57
+   at prep.specs.MovieLibrarySpecs.when_searching_for_movies.&lt;.ctor&gt;b__36() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep.specs\MovieLibrarySpecs.cs:line 213
+   at Machine.Specifications.Model.Specification.Verify()</pre>
+
+
+
+ 
+
+          </li>
+          <li class="spec"><span id="11">should be able to find all movies published between a certain range of years</span>
+
+  <div class="failure">
+    &lArr; FAILED
+    <ul class="prev-next">
+      <li class="failure">
+        <a href="#10" title="Go to previous failed specification">&uArr;</a>
+      </li>
+      <li class="failure">
+        <a href="#12" title="Go to next failed specification">&dArr;</a>
+      </li>
+    </ul>
+  </div>
+  <p class="exception_type">
+    NotImplementedException
+  </p>
+  <pre class="exception_message">System.NotImplementedException: The method or operation is not implemented.
+   at prep.collections.MovieLibrary.all_movies_published_between_years(Int32 startingYear, Int32 endingYear) in c:\Users\james_bunn\Documents\GitHub\prep\source\prep\collections\MovieLibrary.cs:line 62
+   at prep.specs.MovieLibrarySpecs.when_searching_for_movies.&lt;.ctor&gt;b__37() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep.specs\MovieLibrarySpecs.cs:line 220
+   at Machine.Specifications.Model.Specification.Verify()</pre>
+
+
+
+ 
+
+          </li>
+          <li class="spec"><span id="12">should be able to find all kid movies</span>
+
+  <div class="failure">
+    &lArr; FAILED
+    <ul class="prev-next">
+      <li class="failure">
+        <a href="#11" title="Go to previous failed specification">&uArr;</a>
+      </li>
+      <li class="failure">
+        <a href="#13" title="Go to next failed specification">&dArr;</a>
+      </li>
+    </ul>
+  </div>
+  <p class="exception_type">
+    NotImplementedException
+  </p>
+  <pre class="exception_message">System.NotImplementedException: The method or operation is not implemented.
+   at prep.collections.MovieLibrary.all_kid_movies() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep\collections\MovieLibrary.cs:line 67
+   at prep.specs.MovieLibrarySpecs.when_searching_for_movies.&lt;.ctor&gt;b__38() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep.specs\MovieLibrarySpecs.cs:line 227
+   at Machine.Specifications.Model.Specification.Verify()</pre>
+
+
+
+ 
+
+          </li>
+          <li class="spec"><span id="13">should be able to find all action movies</span>
+
+  <div class="failure">
+    &lArr; FAILED
+    <ul class="prev-next">
+      <li class="failure">
+        <a href="#12" title="Go to previous failed specification">&uArr;</a>
+      </li>
+      <li class="failure">
+        <a href="#14" title="Go to next failed specification">&dArr;</a>
+      </li>
+    </ul>
+  </div>
+  <p class="exception_type">
+    NotImplementedException
+  </p>
+  <pre class="exception_message">System.NotImplementedException: The method or operation is not implemented.
+   at prep.collections.MovieLibrary.all_action_movies() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep\collections\MovieLibrary.cs:line 72
+   at prep.specs.MovieLibrarySpecs.when_searching_for_movies.&lt;.ctor&gt;b__39() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep.specs\MovieLibrarySpecs.cs:line 234
+   at Machine.Specifications.Model.Specification.Verify()</pre>
+
+
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when sorting movies
+</h3>
+<h4 class="count">
+  5 specifications
+</h4>
+        <ul>
+          <li class="spec"><span id="14">should be able to sort all movies by title descending</span>
+
+  <div class="failure">
+    &lArr; FAILED
+    <ul class="prev-next">
+      <li class="failure">
+        <a href="#13" title="Go to previous failed specification">&uArr;</a>
+      </li>
+      <li class="failure">
+        <a href="#15" title="Go to next failed specification">&dArr;</a>
+      </li>
+    </ul>
+  </div>
+  <p class="exception_type">
+    NotImplementedException
+  </p>
+  <pre class="exception_message">System.NotImplementedException: The method or operation is not implemented.
+   at prep.collections.MovieLibrary.sort_all_movies_by_title_descending() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep\collections\MovieLibrary.cs:line 27
+   at prep.specs.MovieLibrarySpecs.when_sorting_movies.&lt;.ctor&gt;b__41() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep.specs\MovieLibrarySpecs.cs:line 249
+   at Machine.Specifications.Model.Specification.Verify()</pre>
+
+
+
+ 
+
+          </li>
+          <li class="spec"><span id="15">should be able to sort all movies by title ascending</span>
+
+  <div class="failure">
+    &lArr; FAILED
+    <ul class="prev-next">
+      <li class="failure">
+        <a href="#14" title="Go to previous failed specification">&uArr;</a>
+      </li>
+      <li class="failure">
+        <a href="#16" title="Go to next failed specification">&dArr;</a>
+      </li>
+    </ul>
+  </div>
+  <p class="exception_type">
+    NotImplementedException
+  </p>
+  <pre class="exception_message">System.NotImplementedException: The method or operation is not implemented.
+   at prep.collections.MovieLibrary.sort_all_movies_by_title_ascending() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep\collections\MovieLibrary.cs:line 42
+   at prep.specs.MovieLibrarySpecs.when_sorting_movies.&lt;.ctor&gt;b__42() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep.specs\MovieLibrarySpecs.cs:line 258
+   at Machine.Specifications.Model.Specification.Verify()</pre>
+
+
+
+ 
+
+          </li>
+          <li class="spec"><span id="16">should be able to sort all movies by date published descending</span>
+
+  <div class="failure">
+    &lArr; FAILED
+    <ul class="prev-next">
+      <li class="failure">
+        <a href="#15" title="Go to previous failed specification">&uArr;</a>
+      </li>
+      <li class="failure">
+        <a href="#17" title="Go to next failed specification">&dArr;</a>
+      </li>
+    </ul>
+  </div>
+  <p class="exception_type">
+    NotImplementedException
+  </p>
+  <pre class="exception_message">System.NotImplementedException: The method or operation is not implemented.
+   at prep.collections.MovieLibrary.sort_all_movies_by_date_published_descending() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep\collections\MovieLibrary.cs:line 77
+   at prep.specs.MovieLibrarySpecs.when_sorting_movies.&lt;.ctor&gt;b__43() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep.specs\MovieLibrarySpecs.cs:line 267
+   at Machine.Specifications.Model.Specification.Verify()</pre>
+
+
+
+ 
+
+          </li>
+          <li class="spec"><span id="17">should be able to sort all movies by date published ascending</span>
+
+  <div class="failure">
+    &lArr; FAILED
+    <ul class="prev-next">
+      <li class="failure">
+        <a href="#16" title="Go to previous failed specification">&uArr;</a>
+      </li>
+      <li class="failure">
+        <a href="#18" title="Go to next failed specification">&dArr;</a>
+      </li>
+    </ul>
+  </div>
+  <p class="exception_type">
+    NotImplementedException
+  </p>
+  <pre class="exception_message">System.NotImplementedException: The method or operation is not implemented.
+   at prep.collections.MovieLibrary.sort_all_movies_by_date_published_ascending() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep\collections\MovieLibrary.cs:line 82
+   at prep.specs.MovieLibrarySpecs.when_sorting_movies.&lt;.ctor&gt;b__44() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep.specs\MovieLibrarySpecs.cs:line 276
+   at Machine.Specifications.Model.Specification.Verify()</pre>
+
+
+
+ 
+
+          </li>
+          <li class="spec"><span id="18">should be able to sort all movies by studio rating and year published</span>
+
+  <div class="failure">
+    &lArr; FAILED
+    <ul class="prev-next">
+      <li class="failure">
+        <a href="#17" title="Go to previous failed specification">&uArr;</a>
+      </li>
+      <li class="failure">
+        <a href="#3" title="Go to next failed specification">&dArr;</a>
+      </li>
+    </ul>
+  </div>
+  <p class="exception_type">
+    NotImplementedException
+  </p>
+  <pre class="exception_message">System.NotImplementedException: The method or operation is not implemented.
+   at prep.collections.MovieLibrary.sort_all_movies_by_movie_studio_and_year_published() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep\collections\MovieLibrary.cs:line 47
+   at prep.specs.MovieLibrarySpecs.when_sorting_movies.&lt;.ctor&gt;b__45() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep.specs\MovieLibrarySpecs.cs:line 291
+   at Machine.Specifications.Model.Specification.Verify()</pre>
+
+
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when trying to change the set of movies returned by the movie library to a mutable type
+</h3>
+<h4 class="count">
+  1 specification
+</h4>
+        <ul>
+          <li class="spec"><span id="3">should get an invalid cast exception</span>
+
+  <div class="failure">
+    &lArr; FAILED
+    <ul class="prev-next">
+      <li class="failure">
+        <a href="#18" title="Go to previous failed specification">&uArr;</a>
+      </li>
+      <li class="failure">
+      </li>
+    </ul>
+  </div>
+  <p class="exception_type">
+    SpecificationException
+  </p>
+  <pre class="exception_message">Machine.Specifications.SpecificationException: Should be of type System.RuntimeType but is [null]
+   at Machine.Specifications.ShouldExtensionMethods.ShouldBeOfType(Object actual, Type expected)
+   at developwithpassion.specifications.extensions.AssertionExtensions.ShouldBeAn[T](Object result) in c:\Users\jp\repositories\github\developwithpassion.specifications\source\developwithpassion.specifications\extensions\AssertionExtensions.cs:line 9
+   at prep.specs.MovieLibrarySpecs.when_trying_to_change_the_set_of_movies_returned_by_the_movie_library_to_a_mutable_type.&lt;.ctor&gt;b__11() in c:\Users\james_bunn\Documents\GitHub\prep\source\prep.specs\MovieLibrarySpecs.cs:line 128
+   at Machine.Specifications.Model.Specification.Verify()</pre>
+
+
+
+ 
+
+          </li>
+        </ul>
+    <hr/>
+</body>
+</html>
