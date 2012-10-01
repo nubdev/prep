@@ -92,5 +92,5 @@ end
 
 while true do
   monitor
-  sleep(1)
+  sleep(2)
 end
