@@ -1,4 +1,4 @@
-﻿using prep.utility;
+﻿using prep.utility.filtering;
 
 namespace prep.collections
 {
@@ -14,6 +14,6 @@ namespace prep.collections
     public bool matches(Movie movie)
     {
       return movie.production_studio == studio;
-    } 
+    }
   }
 }
