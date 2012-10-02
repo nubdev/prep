@@ -1,5 +1,5 @@
 using System;
-using System.Collections.Generic;
+using prep.collections;
 
 namespace prep.utility.filtering
 {
@@ -10,30 +10,11 @@ namespace prep.utility.filtering
     {
       return new MatchFactory<ItemToFilter, PropertyType>(accessor);
     }
-  }
 
-  public class MatchFactory<Item, PropertyType>
-  {
-    PropertyAccessor<Item, PropertyType> accessor;
-
-    public MatchFactory(PropertyAccessor<Item, PropertyType> accessor)
+    public static ComparableMatchFactory<ItemToFilter, PropertyType> has_an<PropertyType>(
+      PropertyAccessor<ItemToFilter, PropertyType> accessor) where PropertyType : IComparable<PropertyType>
     {
-      this.accessor = accessor;
-    }
-
-    public IMatchAn<Item> equal_to(PropertyType value)
-    {
-      return equal_to_any(value);
-    }
-
-    public IMatchAn<Item> equal_to_any(params PropertyType[] values)
-    {
-      return new DynamicCondition<Item>(x => new List<PropertyType>(values).Contains(accessor(x)));
-    }
-
-    public IMatchAn<Item> not_equal_to(PropertyType value)
-    {
-      throw new NotImplementedException();
+      return new ComparableMatchFactory<ItemToFilter, PropertyType>(accessor);
     }
   }
 }
