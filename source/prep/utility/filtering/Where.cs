@@ -1,4 +1,5 @@
-using prep.collections;
+using System;
+using System.Collections.Generic;
 
 namespace prep.utility.filtering
 {
@@ -22,12 +23,17 @@ namespace prep.utility.filtering
 
     public IMatchAn<Item> equal_to(PropertyType value)
     {
-      return new DynamicCondition<Item>(x => accessor(x).Equals(value));
+      return equal_to_any(value);
     }
 
-    public IMatchAn<Movie> equal_to_any(params PropertyType[] values)
+    public IMatchAn<Item> equal_to_any(params PropertyType[] values)
     {
-      throw new System.NotImplementedException();
+      return new DynamicCondition<Item>(x => new List<PropertyType>(values).Contains(accessor(x)));
+    }
+
+    public IMatchAn<Item> not_equal_to(PropertyType value)
+    {
+      throw new NotImplementedException();
     }
   }
 }
