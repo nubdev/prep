@@ -7,10 +7,10 @@ namespace prep.utility.filtering
     T end;
     T start;
 
-    public IsBetween(T end, T start)
+    public IsBetween(T start,T end)
     {
-      this.end = end;
       this.start = start;
+      this.end = end;
     }
 
     public bool matches(T item)
