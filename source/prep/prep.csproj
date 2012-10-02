@@ -69,13 +69,16 @@
     <Compile Include="utility\filtering\DynamicCondition.cs" />
     <Compile Include="utility\EnumerableExtensions.cs" />
     <Compile Include="utility\filtering\EqualToAny.cs" />
+    <Compile Include="utility\filtering\FallsInRange.cs" />
     <Compile Include="utility\filtering\FilteringExtensions.cs" />
     <Compile Include="utility\filtering\IMatchAnItem.cs" />
+    <Compile Include="utility\filtering\IProvideAccessToCreatingSpecifications.cs" />
     <Compile Include="utility\filtering\IsBetween.cs" />
     <Compile Include="utility\filtering\isGreaterThan.cs" />
     <Compile Include="utility\filtering\MatchCreationExtensionPoint.cs" />
     <Compile Include="utility\filtering\MatchExtensions.cs" />
     <Compile Include="utility\filtering\NegatingMatch.cs" />
+    <Compile Include="utility\filtering\NegatingMatchCreationExtensionPoint.cs" />
     <Compile Include="utility\filtering\NeverMatches.cs" />
     <Compile Include="utility\filtering\PropertyAccessor.cs" />
     <Compile Include="utility\filtering\OrMatch.cs" />

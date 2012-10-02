@@ -200,10 +200,9 @@ namespace prep.specs
 
       It should_be_able_to_find_all_movies_published_by_pixar_or_disney = () =>
       {
-        var criteria = Where<Movie>.has_a(x => x.production_studio).equal_to_any(ProductionStudio.Pixar,
+        var results = sut.all_movies().where(x => x.production_studio).equal_to_any(ProductionStudio.Pixar,
                                                                                  ProductionStudio.Disney);
 
-        var results = sut.all_movies().all_items_matching(criteria);
 
         results.ShouldContainOnly(a_bugs_life, pirates_of_the_carribean, cars);
       };
@@ -228,7 +227,7 @@ namespace prep.specs
 
       It should_be_able_to_find_all_movies_published_between_a_certain_range_of_years = () =>
       {
-        var criteria = Where<Movie>.has_a(x => x.date_published).between(1982, 2003);
+        var criteria = Where<Movie>.has_a(x => x.date_published).that_falls_in(....);
 
         var results = sut.all_movies().all_items_matching(criteria);
 
