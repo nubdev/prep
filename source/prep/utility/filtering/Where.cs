@@ -5,7 +5,7 @@ namespace prep.utility.filtering
   public class Where<ItemToFilter>
   {
     public static MatchFactory<ItemToFilter, PropertyType> has_a<PropertyType>(
-      PropertyAccessor<ItemToFilter, PropertyType> accessor)
+      PropertyAccessor<ItemToFilter, PropertyType> accessor) 
     {
       return new MatchFactory<ItemToFilter, PropertyType>(accessor);
     }
