@@ -1,5 +1,3 @@
-using System;
-
 namespace prep.utility.filtering
 {
   public class Where<ItemToFilter>

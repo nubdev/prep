@@ -14,10 +14,6 @@ namespace prep.utility.filtering
       return create_using(extension_point, new EqualToAny<PropertyType>(values));
     }
 
-    public static IMatchAn<Item> not_equal_to<Item,PropertyType>(this MatchCreationExtensionPoint<Item,PropertyType> extension_point,PropertyType value)
-    {
-      return equal_to(extension_point,value).not();
-    }
 
     public static IMatchAn<Item> create_using<Item,PropertyType>(this MatchCreationExtensionPoint<Item,PropertyType> extension_point,IMatchAn<PropertyType> real_matcher)
     {

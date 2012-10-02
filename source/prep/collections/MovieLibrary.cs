@@ -29,86 +29,12 @@ namespace prep.collections
       return movies.Contains(movie);
     }
 
-    public IEnumerable<Movie> all_movies_published_by_pixar()
-    {
-      throw new NotImplementedException();
-    }
-
-    public IEnumerable<Movie> all_movies_not_published_by_pixar()
-    {
-      var productionHouse = ProductionStudio.Pixar;
-      var results = new List<Movie>();
-      foreach (var movie in movies)
-      {
-        if (movie.production_studio != productionHouse)
-        {
-          results.Add(movie);
-        }
-      }
-
-      return results;
-    }
-
-    public IEnumerable<Movie> all_movies_published_between_years(int startingYear, int endingYear)
-    {
-      var results = new List<Movie>();
-      foreach (var movie in movies)
-      {
-        if (movie.date_published.Year >= startingYear && movie.date_published.Year <= endingYear)
-        {
-          results.Add(movie);
-        }
-      }
-      return results;
-    }
-
-    public IEnumerable<Movie> all_movies_published_after(int year)
-    {
-      throw new NotImplementedException();
-    }
-
-    public IEnumerable<Movie> all_movies_published_by_pixar_or_disney()
-    {
-      throw new NotImplementedException();
-    }
-
-    public IEnumerable<Movie> all_kid_movies()
-    {
-      var genre = Genre.kids;
-      IList<Movie> results = new List<Movie>();
-
-      foreach (var currentMovie in this.movies)
-      {
-        if (currentMovie.genre == genre)
-        {
-          results.Add(currentMovie);
-        }
-      }
-
-      return results;
-    }
 
     public IEnumerable<Movie> sort_all_movies_by_title_descending()
     {
       throw new NotImplementedException();
     }
 
-    public IEnumerable<Movie> all_action_movies()
-    {
-      var genre = Genre.action;
-
-      var results = new List<Movie>();
-
-      foreach (var movie in movies)
-      {
-        if (movie.genre == genre)
-        {
-          results.Add(movie);
-        }
-      }
-
-      return results;
-    }
 
     public IEnumerable<Movie> sort_all_movies_by_title_ascending()
     {

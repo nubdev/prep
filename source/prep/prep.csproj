@@ -65,6 +65,7 @@
     <Compile Include="collections\ProductionStudio.cs" />
     <Compile Include="collections\ReadOnlySet.cs" />
     <Compile Include="utility\filtering\Condition.cs" />
+    <Compile Include="utility\filtering\DateFilteringExtensions.cs" />
     <Compile Include="utility\filtering\DynamicCondition.cs" />
     <Compile Include="utility\EnumerableExtensions.cs" />
     <Compile Include="utility\filtering\EqualToAny.cs" />
