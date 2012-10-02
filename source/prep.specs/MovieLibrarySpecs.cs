@@ -219,7 +219,7 @@ namespace prep.specs
 
       It should_be_able_to_find_all_movies_published_after_a_certain_year = () =>
       {
-      i  var criteria = Where<Movie>.has_an(x => x.date_published.Year).greater_than(2004);
+        var criteria = Where<Movie>.has_an(x => x.date_published.Year).greater_than(2004);
 
         var results = sut.all_movies().all_items_matching(criteria);
 

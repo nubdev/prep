@@ -1,5 +1,4 @@
 using System;
-using prep.collections;
 
 namespace prep.utility.filtering
 {
@@ -14,7 +13,7 @@ namespace prep.utility.filtering
     public static ComparableMatchFactory<ItemToFilter, PropertyType> has_an<PropertyType>(
       PropertyAccessor<ItemToFilter, PropertyType> accessor) where PropertyType : IComparable<PropertyType>
     {
-      return new ComparableMatchFactory<ItemToFilter, PropertyType>(accessor);
+      return new ComparableMatchFactory<ItemToFilter, PropertyType>(accessor,has_a(accessor));
     }
   }
 }
